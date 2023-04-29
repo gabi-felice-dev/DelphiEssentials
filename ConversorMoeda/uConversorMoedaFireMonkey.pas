@@ -18,9 +18,11 @@ type
     edtDolar: TEdit;
     Label3: TLabel;
     Button1: TButton;
-    procedure edtRealExit(Sender: TObject);
-    procedure edtDolarExit(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure edtRealKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure edtDolarKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
 
   private
     procedure LimparEdits;
@@ -51,9 +53,10 @@ begin
   end;
 end;
 
-procedure TFrmConversorFM.edtDolarExit(Sender: TObject);
+procedure TFrmConversorFM.edtDolarKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
 begin
-  var real : double;
+ var real : double;
   if TryStrToFloat(edtDolar.Text, real) then
   begin
     edtReal.Text  := TConversorMoeda.DolarparaReal(edtDolar.Text);
@@ -61,9 +64,10 @@ begin
   end;
 end;
 
-procedure TFrmConversorFM.edtRealExit(Sender: TObject);
+procedure TFrmConversorFM.edtRealKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
 begin
-  var real : double;
+ var real : double;
   if TryStrToFloat(edtReal.Text, real) then
   begin
     edtDolar.Text := TConversorMoeda.RealparaDolar(edtReal.Text);

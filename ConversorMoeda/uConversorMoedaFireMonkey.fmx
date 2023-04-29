@@ -58,7 +58,7 @@ object FrmConversorFM: TFrmConversorFM
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Style, FontColor]
-      OnExit = edtRealExit
+      OnKeyDown = edtRealKeyDown
     end
     object Label2: TLabel
       Align = Client
@@ -94,7 +94,7 @@ object FrmConversorFM: TFrmConversorFM
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Style, FontColor]
-      OnExit = edtDolarExit
+      OnKeyDown = edtDolarKeyDown
     end
     object Label3: TLabel
       Align = Client
