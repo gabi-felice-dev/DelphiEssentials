@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/19 08:10:58.000.069,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/19 11:39:38.000.763,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/26 19:39:24.000.902,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/26 19:41:47.000.542,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 11:12:15.000.043,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 11:13:05.000.913,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 11:13:44.000.346,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 11:14:12.000.373,C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Git\DelphiEssentials\ConversorMoeda\uConversorMoedaVCL.pas</Transaction>
+    <Transaction>2023/04/29 11:14:12.000.373,C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Git\DelphiEssentials\ConversorMoeda\uConversorMoedaVCL.dfm</Transaction>
+    <Transaction>2023/04/29 11:14:45.000.481,C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Git\DelphiEssentials\ConversorMoeda\Project1.dproj</Transaction>
+    <Transaction>2023/04/29 13:55:37.239,C:\Git\DelphiEssentials\ConversorMoeda\ConversorMoedaVCL.dproj=C:\Git\DelphiEssentials\ConversorMoeda\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

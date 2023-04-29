@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5071FCB0-D659-42CF-88F7-5326251A99D4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ConversorMoeda.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConversorMoedaVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConversorMoedaFM.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ConversorMoeda">
+        <MSBuild Projects="ConversorMoeda.dproj"/>
+    </Target>
+    <Target Name="ConversorMoeda:Clean">
+        <MSBuild Projects="ConversorMoeda.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConversorMoeda:Make">
+        <MSBuild Projects="ConversorMoeda.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConversorMoedaVCL">
+        <MSBuild Projects="ConversorMoedaVCL.dproj"/>
+    </Target>
+    <Target Name="ConversorMoedaVCL:Clean">
+        <MSBuild Projects="ConversorMoedaVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConversorMoedaVCL:Make">
+        <MSBuild Projects="ConversorMoedaVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConversorMoedaFM">
+        <MSBuild Projects="ConversorMoedaFM.dproj"/>
+    </Target>
+    <Target Name="ConversorMoedaFM:Clean">
+        <MSBuild Projects="ConversorMoedaFM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConversorMoedaFM:Make">
+        <MSBuild Projects="ConversorMoedaFM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ConversorMoeda;ConversorMoedaVCL;ConversorMoedaFM"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ConversorMoeda:Clean;ConversorMoedaVCL:Clean;ConversorMoedaFM:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ConversorMoeda:Make;ConversorMoedaVCL:Make;ConversorMoedaFM:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

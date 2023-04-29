@@ -1,0 +1,56 @@
+﻿unit Classe.ConversorMoeda;
+
+interface
+
+uses
+  Winapi.WinSock, System.SysUtils, System.Classes, System.JSON,
+  System.Net.HttpClient, HTTPApp, IdHTTP;
+
+type
+  TConversorMoeda = class
+    class function RealparaDolar(valorReal : Double) : Double;
+    class function DolarparaReal(valorReal : Double) : Double;
+    class function RealparaDolar(valorReal : string) : string;
+    class function DolarparaReal(valorReal : string) : string;
+    class function GetQuoteFromJson: Double;
+  end;
+
+implementation
+
+{ TConversorMoeda }
+
+class function TConversorMoeda.RealparaDolar(valorReal: Double): Double;
+var Quote : double;
+begin
+  Result :=  valorReal / GetQuoteFromJson;
+end;
+
+class function TConversorMoeda.DolarparaReal(valorReal: Double): Double;
+var Quote : double;
+begin
+  Result :=  valorReal * GetQuoteFromJson;
+end;
+
+class function TConversorMoeda.GetQuoteFromJson: Double;
+var
+  templist:   TJSONArray;
+  HTTPClient: THTTPClient;
+  Response: IHTTPResponse;
+begin
+  try
+    HttpClient := THTTPClient.Create;
+    templist   := TJSONArray.Create;
+    Response := HttpClient.Get('https://api.bcb.gov.br/dados/serie/bcdata.sgs.10813/dados/ultimos/1?formato=json');
+    templist := TJSONObject.ParseJSONValue(Response.ContentAsString) as TJSONArray;
+    try
+      Result := templist.Items[0].GetValue<Double>('valor');
+    finally
+      templist.Free;
+      HttpClient.Free;
+    end;
+  except on E: Exception do
+    Result := 0;
+  end;
+end;
+
+end.

@@ -1,0 +1,49 @@
+unit uConversorMoedaFireMonkey;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit,
+  FMX.StdCtrls, FMX.Controls.Presentation, Classe.ConversorMoeda;
+
+type
+  TForm2 = class(TForm)
+    Panel1: TPanel;
+    Panel3: TPanel;
+    Label1: TLabel;
+    edtReal: TEdit;
+    Label2: TLabel;
+    Panel2: TPanel;
+    edtDolar: TEdit;
+    Label3: TLabel;
+    procedure edtRealKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure edtRealKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm2.edtRealKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  edtReal.Text := TConversorMoeda.DolarparaReal(edtDolar.Text);
+end;
+
+procedure TForm2.edtRealKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+begin
+  edtDolar.Text := TConversorMoeda.RealparaDolar(edtReal.Text);
+end;
+
+end.

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023/04/29 11:57:55.535,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/04/29 12:07:53.410,C:\Git\DelphiEssentials\ConversorMoeda\uConversorMoedaFireMonkey.fmx=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>2023/04/29 12:07:53.410,C:\Git\DelphiEssentials\ConversorMoeda\uConversorMoedaFireMonkey.pas=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/04/29 12:07:56.490,C:\Git\DelphiEssentials\ConversorMoeda\Project2.dproj=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2023/04/29 12:12:57.673,=C:\Git\DelphiEssentials\ConversorMoeda\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 12:13:27.580,C:\Git\DelphiEssentials\ConversorMoeda\Classe.ConversorMoeda.pas=C:\Git\DelphiEssentials\ConversorMoeda\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 13:55:54.003,C:\Git\DelphiEssentials\ConversorMoeda\ConversorMoedaFM.dproj=C:\Git\DelphiEssentials\ConversorMoeda\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

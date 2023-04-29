@@ -1,0 +1,30 @@
+unit uFuncoes;
+
+uses TIndy;
+
+interface
+
+implementation
+
+function GetDollarQuote: Double;
+
+function GetDollarQuote: Double;
+var
+  Http: TIdHTTP;
+  Response: string;
+  JsonObject: TJsonObject;
+begin
+  Http := TIdHTTP.Create(nil);
+  try
+    Response := Http.Get('https://api.exchangerate-api.com/v4/latest/USD');
+    JsonObject := TJsonObject.Parse(Response) as TJsonObject;
+    try
+      Result := JsonObject.GetValue('rates').GetValue('BRL').Value.ToDouble;
+    finally
+      JsonObject.Free;
+    end;
+  finally
+    Http.Free;
+  end;
+end;
+

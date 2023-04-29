@@ -5,7 +5,10 @@
     <Transaction>2022/10/19 11:39:38.000.763,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/10/26 19:39:24.000.902,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/10/26 19:41:47.000.542,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/04/29 10:38:30.843,C:\Git\DelphiEssentials\ConversorMoeda\ConversorMoeda.dproj=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/04/29 10:38:30.000.843,C:\Git\DelphiEssentials\ConversorMoeda\ConversorMoeda.dproj=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/04/29 10:59:20.000.736,=C:\Git\DelphiEssentials\ConversorMoeda\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 10:59:39.000.531,C:\Git\DelphiEssentials\ConversorMoeda\uFuncoes.pas=C:\Git\DelphiEssentials\ConversorMoeda\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 12:59:23.917,C:\Git\DelphiEssentials\ConversorMoeda\uFuncoes.pas=</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5"/>
