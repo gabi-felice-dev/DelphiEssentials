@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023/04/29 15:15:10.865,=C:\Git\DelphiEssentials\ConversorMoeda\FormUnit1.pas</Transaction>
+    <Transaction>2023/04/29 15:15:11.184,=C:\Git\DelphiEssentials\ConversorMoeda\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2023/04/29 15:15:11.402,=C:\Git\DelphiEssentials\ConversorMoeda\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/04/29 15:15:11.737,=C:\Git\DelphiEssentials\ConversorMoeda\js\base64.js</Transaction>
+    <Transaction>2023/04/29 15:15:11.801,=C:\Git\DelphiEssentials\ConversorMoeda\js\serverfunctionexecutor.js</Transaction>
+    <Transaction>2023/04/29 15:15:11.858,=C:\Git\DelphiEssentials\ConversorMoeda\js\json2.js</Transaction>
+    <Transaction>2023/04/29 15:15:11.945,=C:\Git\DelphiEssentials\ConversorMoeda\js\callbackframework.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.008,=C:\Git\DelphiEssentials\ConversorMoeda\js\serverfunctions.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.060,=C:\Git\DelphiEssentials\ConversorMoeda\js\base64-min.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.156,=C:\Git\DelphiEssentials\ConversorMoeda\js\json2-min.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.224,=C:\Git\DelphiEssentials\ConversorMoeda\js\serverfunctionexecutor-min.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.291,=C:\Git\DelphiEssentials\ConversorMoeda\js\callbackframework-min.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.379,=C:\Git\DelphiEssentials\ConversorMoeda\js\connection.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.457,=C:\Git\DelphiEssentials\ConversorMoeda\js\serverfunctioninvoker.js</Transaction>
+    <Transaction>2023/04/29 15:15:12.572,=C:\Git\DelphiEssentials\ConversorMoeda\css\main.css</Transaction>
+    <Transaction>2023/04/29 15:15:12.707,=C:\Git\DelphiEssentials\ConversorMoeda\css\serverfunctioninvoker.css</Transaction>
+    <Transaction>2023/04/29 15:15:12.847,=C:\Git\DelphiEssentials\ConversorMoeda\templates\reversestring.html</Transaction>
+    <Transaction>2023/04/29 15:15:12.976,=C:\Git\DelphiEssentials\ConversorMoeda\templates\serverfunctioninvoker.html</Transaction>
+    <Transaction>2023/04/29 15:15:13.302,=C:\Git\DelphiEssentials\ConversorMoeda\images\collapse.png</Transaction>
+    <Transaction>2023/04/29 15:15:13.403,=C:\Git\DelphiEssentials\ConversorMoeda\images\expand.png</Transaction>
+    <Transaction>2023/04/29 15:16:39.045,C:\Git\DelphiEssentials\ConversorMoeda\uConversorMoedaDataSnap.dfm=C:\Git\DelphiEssentials\ConversorMoeda\FormUnit1.dfm</Transaction>
+    <Transaction>2023/04/29 15:16:39.045,C:\Git\DelphiEssentials\ConversorMoeda\uConversorMoedaDataSnap.pas=C:\Git\DelphiEssentials\ConversorMoeda\FormUnit1.pas</Transaction>
+    <Transaction>2023/04/29 15:20:20.423,=C:\Git\DelphiEssentials\ConversorMoeda\Classe.ConversorMoeda.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -12,6 +12,9 @@
         <Projects Include="ConversorMoedaFM.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="ConversorMoeda1.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="ConversorMoedaFM:Make">
         <MSBuild Projects="ConversorMoedaFM.dproj" Targets="Make"/>
     </Target>
+    <Target Name="ConversorMoeda1">
+        <MSBuild Projects="ConversorMoeda1.dproj"/>
+    </Target>
+    <Target Name="ConversorMoeda1:Clean">
+        <MSBuild Projects="ConversorMoeda1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConversorMoeda1:Make">
+        <MSBuild Projects="ConversorMoeda1.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ConversorMoeda;ConversorMoedaVCL;ConversorMoedaFM"/>
+        <CallTarget Targets="ConversorMoeda;ConversorMoedaVCL;ConversorMoedaFM;ConversorMoeda1"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ConversorMoeda:Clean;ConversorMoedaVCL:Clean;ConversorMoedaFM:Clean"/>
+        <CallTarget Targets="ConversorMoeda:Clean;ConversorMoedaVCL:Clean;ConversorMoedaFM:Clean;ConversorMoeda1:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ConversorMoeda:Make;ConversorMoedaVCL:Make;ConversorMoedaFM:Make"/>
+        <CallTarget Targets="ConversorMoeda:Make;ConversorMoedaVCL:Make;ConversorMoedaFM:Make;ConversorMoeda1:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
