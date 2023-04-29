@@ -58,6 +58,7 @@ object FrmConversorFM: TFrmConversorFM
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Style, FontColor]
+      OnClick = edtRealClick
       OnExit = edtRealExit
     end
     object Label2: TLabel
@@ -94,6 +95,7 @@ object FrmConversorFM: TFrmConversorFM
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, Style, FontColor]
+      OnClick = edtDolarClick
       OnExit = edtDolarExit
     end
     object Label3: TLabel

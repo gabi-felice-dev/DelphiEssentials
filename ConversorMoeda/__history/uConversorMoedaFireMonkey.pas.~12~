@@ -21,7 +21,8 @@ type
     procedure edtRealExit(Sender: TObject);
     procedure edtDolarExit(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-
+    procedure edtRealClick(Sender: TObject);
+    procedure edtDolarClick(Sender: TObject);
   private
     procedure LimparEdits;
     { Private declarations }

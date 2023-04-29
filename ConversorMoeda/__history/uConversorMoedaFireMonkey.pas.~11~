@@ -21,7 +21,8 @@ type
     procedure edtRealExit(Sender: TObject);
     procedure edtDolarExit(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-
+    procedure edtRealClick(Sender: TObject);
+    procedure edtDolarClick(Sender: TObject);
   private
     procedure LimparEdits;
     { Private declarations }
@@ -51,6 +52,11 @@ begin
   end;
 end;
 
+procedure TFrmConversorFM.edtDolarClick(Sender: TObject);
+begin
+ LimparEdits;
+end;
+
 procedure TFrmConversorFM.edtDolarExit(Sender: TObject);
 begin
   var real : double;
@@ -59,6 +65,11 @@ begin
     edtReal.Text  := TConversorMoeda.DolarparaReal(edtDolar.Text);
     edtDolar.Text := FormatFloat('U$ 0.,00', StrToFloat(edtDolar.Text));
   end;
+end;
+
+procedure TFrmConversorFM.edtRealClick(Sender: TObject);
+begin
+ LimparEdits;
 end;
 
 procedure TFrmConversorFM.edtRealExit(Sender: TObject);

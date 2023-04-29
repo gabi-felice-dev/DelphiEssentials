@@ -8,7 +8,7 @@ uses
   FMX.StdCtrls, FMX.Controls.Presentation, Classe.ConversorMoeda;
 
 type
-  TFrmConversorFM = class(TForm)
+  TForm2 = class(TForm)
     Panel1: TPanel;
     Panel3: TPanel;
     Label1: TLabel;
@@ -17,41 +17,22 @@ type
     Panel2: TPanel;
     edtDolar: TEdit;
     Label3: TLabel;
-    Button1: TButton;
     procedure edtRealExit(Sender: TObject);
     procedure edtDolarExit(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
-
   private
-    procedure LimparEdits;
     { Private declarations }
   public
     { Public declarations }
   end;
 
 var
-  FrmConversorFM: TFrmConversorFM;
+  Form2: TForm2;
 
 implementation
 
 {$R *.fmx}
 
-procedure TFrmConversorFM.Button1Click(Sender: TObject);
-begin
-  LimparEdits;
-end;
-
-procedure TFrmConversorFM.LimparEdits;
-var i : integer;
-begin
-  for i := FrmConversorFM.ComponentCount -1 downto 0 do
-  begin
-    if (FrmConversorFM.Components[i] is TEdit) then
-       (FrmConversorFM.Components[i] as TEdit).text := '';
-  end;
-end;
-
-procedure TFrmConversorFM.edtDolarExit(Sender: TObject);
+procedure TForm2.edtDolarExit(Sender: TObject);
 begin
   var real : double;
   if TryStrToFloat(edtDolar.Text, real) then
@@ -61,7 +42,7 @@ begin
   end;
 end;
 
-procedure TFrmConversorFM.edtRealExit(Sender: TObject);
+procedure TForm2.edtRealExit(Sender: TObject);
 begin
   var real : double;
   if TryStrToFloat(edtReal.Text, real) then
