@@ -113,9 +113,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="form.cadastro.bb.pas">
-            <Form>Form3</Form>
+            <Form>FrmCadastroBB</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Pkg.Json.DTO.pas"/>
+        <DCCReference Include="Classe.Paises.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
