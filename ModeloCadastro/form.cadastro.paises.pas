@@ -8,7 +8,8 @@ uses
   REST.Types, REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, Data.DB,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,    System.JSON,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, Rest.Json,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Classe.Paises;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Classe.Paises, IdHTTP,
+  Vcl.Imaging.Jpeg, Vcl.Imaging.PngImage;
 
 type
   TFrmCadastroPaises = class(TForm)
@@ -28,9 +29,14 @@ type
     MemTable_cca2: TStringField;
     MemTable_population: TLargeintField;
     MemTable_flag: TStringField;
+    ButtonSalvar: TButton;
     procedure ButtonPaisClick(Sender: TObject);
+    procedure DataSourcePaisDataChange(Sender: TObject; Field: TField);
   private
     { Private declarations }
+    FUrlBandeiraCarregada :string;
+    procedure CarregaImagemBanceira(url : string);
+    function LoadImageFromURL(const URL: string): TBitmap;
   public
     { Public declarations }
   end;
@@ -69,4 +75,48 @@ begin
 
 end;
 
+procedure TFrmCadastroPaises.CarregaImagemBanceira(url: string);
+begin
+  if FUrlBandeiraCarregada = url then
+   Exit;
+
+  if url ='' then
+  begin
+    ImgPais.Picture.Assign(nil);
+    FUrlBandeiraCarregada :=  url ;
+    Exit;
+  end;
+
+  //carrega Imagem
+  ImgPais.Picture.Bitmap := LoadImageFromURL(url);
+
+end;
+
+procedure TFrmCadastroPaises.DataSourcePaisDataChange(Sender: TObject;
+  Field: TField);
+begin
+  CarregaImagemBanceira(MemTable_flag.AsString);
+end;
+
+function TFrmCadastroPaises.LoadImageFromURL(const URL: string): TBitmap;
+var
+  IdHTTP: TIdHTTP;
+  ImageStream: TMemoryStream;
+  Image: TPngImage; // Use TJpegImage for JPEG images
+begin
+  IdHTTP := TIdHTTP.Create(nil);
+  ImageStream := TMemoryStream.Create;
+  Image := TPngImage.Create; // Use TJpegImage for JPEG images
+  try
+    IdHTTP.Get(URL, ImageStream);
+    ImageStream.Position := 0;
+    Image.LoadFromStream(ImageStream);
+    Result := TBitmap.Create;
+    Result.Assign(Image);
+  finally
+    IdHTTP.Free;
+    ImageStream.Free;
+    Image.Free;
+  end;
+end;
 end.

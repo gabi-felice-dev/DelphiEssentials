@@ -2,8 +2,8 @@ object FrmCadastroPaises: TFrmCadastroPaises
   Left = 0
   Top = 0
   Caption = 'FrmCadastroPaises'
-  ClientHeight = 442
-  ClientWidth = 628
+  ClientHeight = 631
+  ClientWidth = 903
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,24 +16,20 @@ object FrmCadastroPaises: TFrmCadastroPaises
   object PanelGrid: TPanel
     Left = 0
     Top = 0
-    Width = 628
-    Height = 442
+    Width = 903
+    Height = 631
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 160
-    ExplicitTop = 192
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 120
+    ExplicitHeight = 0
     object Panel2: TPanel
       Left = 1
       Top = 1
-      Width = 626
+      Width = 901
       Height = 41
       Align = alTop
       TabOrder = 0
-      ExplicitLeft = 152
-      ExplicitTop = 24
-      ExplicitWidth = 185
+      ExplicitWidth = 118
       object EditSigla: TEdit
         AlignWithMargins = True
         Left = 4
@@ -46,6 +42,7 @@ object FrmCadastroPaises: TFrmCadastroPaises
         TabOrder = 0
         Text = 'Informe a sigla'
         TextHint = 'Informe a sigla'
+        ExplicitHeight = 23
       end
       object ButtonPais: TButton
         AlignWithMargins = True
@@ -59,37 +56,45 @@ object FrmCadastroPaises: TFrmCadastroPaises
         Caption = 'Buscar Pa'#237's'
         TabOrder = 1
         OnClick = ButtonPaisClick
-        ExplicitTop = 7
+      end
+      object ButtonSalvar: TButton
+        AlignWithMargins = True
+        Left = 295
+        Top = 6
+        Width = 98
+        Height = 29
+        Margins.Top = 5
+        Margins.Bottom = 5
+        Align = alLeft
+        Caption = 'Salvar'
+        TabOrder = 2
       end
     end
     object PanelImagem: TPanel
-      Left = 442
+      Left = 717
       Top = 42
       Width = 185
-      Height = 399
+      Height = 588
       Align = alRight
       TabOrder = 1
-      ExplicitLeft = 368
-      ExplicitTop = 256
-      ExplicitHeight = 41
+      ExplicitLeft = -66
+      ExplicitHeight = 399
       object ImgPais: TImage
         Left = 1
         Top = 1
         Width = 183
-        Height = 397
+        Height = 586
         Align = alClient
-        ExplicitLeft = 112
-        ExplicitTop = 64
-        ExplicitWidth = 105
-        ExplicitHeight = 105
+        ExplicitLeft = 3
+        ExplicitWidth = 181
       end
     end
     object GridDados: TDBGrid
       AlignWithMargins = True
       Left = 4
       Top = 45
-      Width = 435
-      Height = 393
+      Width = 710
+      Height = 582
       Align = alClient
       DataSource = DataSourcePais
       TabOrder = 2
@@ -119,6 +124,7 @@ object FrmCadastroPaises: TFrmCadastroPaises
         item
           Expanded = False
           FieldName = 'flag'
+          Width = 200
           Visible = True
         end>
     end
@@ -174,6 +180,7 @@ object FrmCadastroPaises: TFrmCadastroPaises
   end
   object DataSourcePais: TDataSource
     DataSet = MemTable_
+    OnDataChange = DataSourcePaisDataChange
     Left = 272
     Top = 88
   end

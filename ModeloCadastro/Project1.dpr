@@ -7,13 +7,16 @@ uses
   form.cadastro.paises in 'form.cadastro.paises.pas' {FrmCadastroPaises},
   form.cadastro.bb in 'form.cadastro.bb.pas' {FrmCadastroBB},
   Pkg.Json.DTO in 'Pkg.Json.DTO.pas',
-  Classe.Paises in 'Classe.Paises.pas';
+  Classe.Paises in 'Classe.Paises.pas',
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Carbon');
   Application.CreateForm(TFrmMenuCadastro, FrmMenuCadastro);
   Application.Run;
 end.
